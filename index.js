@@ -14,7 +14,7 @@ inquirer
         },
         {
             type: 'input',
-            message: 'What is your GitHub Username',
+            message: 'What is your GitHub Username?',
             name: 'username'
         },
         {
@@ -27,6 +27,21 @@ inquirer
             message: 'Please choose your license option',
             choices: ['MIT', 'Apache2.0', 'GPL3', 'BSD3', 'None'],
             name: 'license',
+        },
+        {
+            type: 'input',
+            message: 'Please add your installation details',
+            name: 'installation'
+        },
+        {
+            type: 'input',
+            message: 'Please enter your usage details',
+            name: 'usage'
+        },
+        {
+            type: 'input',
+            message: 'Please enter your contribution details',
+            name: 'contributing',
         }
     
     ])

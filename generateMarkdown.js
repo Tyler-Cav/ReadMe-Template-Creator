@@ -1,11 +1,9 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
 function renderLicenseBadge(license) {
   
   if (license === "None") {
     return ""
   } else if (license === "MIT") {
-    return " ## License \n ![Alt Text](https://img.shields.io/badge/MIT-000000)"
+    return "![Alt Text](https://img.shields.io/badge/MIT-000000)"
   } else if (license === "Apache2.0") {
     return "## License \n ![Alt Text](https://img.shields.io/badge/Apache2.0-8A2BE2)"
   } else if (license === "GPL3") {
@@ -15,14 +13,19 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-// function renderLicenseLink(license) {
-//   if (license !== "None") {
-//     return 'License'('#license')
-//   } 
-// }
-
+function renderLicenseLink(license) {
+  if (license === "None") {
+    return ""
+  } else if (license === "MIT") {
+    return "## License \n https://opensource.org/license/mit/"
+  } else if (license === "Apache2.0") {
+    return "## License \n https://opensource.org/license/apache-2-0/"
+  } else if (license === "GPL3") {
+    return "## License \n https://opensource.org/license/gpl-3-0/"
+  } else if (license === "BSD3") {
+    return "## License \n https://opensource.org/license/bsd-3-clause/"
+  }
+}
 
 //*Table of contents links. Rapid scroll (AKA Pop to section)
 // TODO: Create a function that returns the license section of README
@@ -35,13 +38,18 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+  ${renderLicenseBadge(data.license)}
   ## Description
   ${data.description}
   ## Table of Contents
   ## Installation
+  ${data.installation}
   ## Usage
-  ${renderLicenseBadge(data.license)}
+  ${data.usage}
+ 
+  ${renderLicenseLink(data.license)}
   ## Contibuting
+  ${data.contributing}
   ## Tests
   ## Questions
 `;
