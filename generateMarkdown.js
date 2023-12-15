@@ -1,3 +1,4 @@
+// Function pushes a selected image badge if one is chosen
 function renderLicenseBadge(license) {
   
   if (license === "None") {
@@ -12,16 +13,15 @@ function renderLicenseBadge(license) {
     return "![Alt Text](https://img.shields.io/badge/BSD3-8A2BE2)"
   }
 }
-
+//Function renders a table of contents clickable section
 function renderLicenseLink(license) {
   if (license !== 'None') {
     return `[license](#license) \n`
+  } else {
+    return ""
   }
   }
-//*Table of contents links. Rapid scroll (AKA Pop to section)
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-
+//If a license is chosen, it will provide an opensource link to the license documentation.
 function renderLicenseSection(license) {
   if (license === "None") {
     return ""
@@ -37,7 +37,7 @@ function renderLicenseSection(license) {
   }
 
 
-// TODO: Create a function to generate markdown for README
+//generateMarkdown is where all file information is built to export a readme.md file into the Dist folder.
 function generateMarkdown(data) {
   return `# ${data.title}
   ${renderLicenseBadge(data.license)}
@@ -54,6 +54,9 @@ function generateMarkdown(data) {
   ${data.contributing}
   ## Tests
   ## Questions
+  Please reach out to me at the resources given below. \n
+  Github Username: ${data.username} \n
+  Email: ${data.email}
 `;
 }
 

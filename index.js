@@ -1,10 +1,13 @@
+//fs pulled from node to write a file
+//pulling inquirer to built terminal prompt questions for the readme file
+//generateMarkdown file pulled to communicate with the function that builds the readme content
 const fs = require('fs')
 const inquirer = require('inquirer');
 const generateMarkdown = require('./generateMarkdown');
 
-// TODO: Include packages needed for this application
 
-// TODO: Create an array of questions for user input
+
+//prompts build to be used as values for the readme file
 inquirer
     .prompt([
         {
@@ -42,19 +45,17 @@ inquirer
             type: 'input',
             message: 'Please enter your contribution details',
             name: 'contributing',
+        },
+        {
+            type: 'input',
+            message: 'Please enter your email for users to reach out for questions.',
+            name: 'email',
         }
     
     ])
+    //.then response function used to initialize the write file for the read me
+    //the generateMarkdown keyword is calling to the generateMarkdown.js function which provides details of the prompt responses.
         .then(response => {
         fs.writeFile('Dist/ReadMe.md', generateMarkdown(response), (err) => 
         err ? console.error(err) : console.log('Success!'))
     })
-
-
-// TODO: Create a function to initialize app
-// function init() {
-
-// }
-
-// Function call to initialize app
-// init();
