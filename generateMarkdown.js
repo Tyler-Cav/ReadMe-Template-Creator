@@ -53,10 +53,11 @@ function generateMarkdown(data) {
   ## Contributing
   ${data.contributing}
   ## Tests
+  ${data.testing}
   ## Questions
   Please reach out to me at the resources given below. \n
-  Github Username: ${data.username} \n
-  Email: ${data.email}
+  ###  Github Username: ${data.username} \n ### Github Link \n ${data.githublink}
+  ### Email: \n ${data.email}
 `;
 }
 

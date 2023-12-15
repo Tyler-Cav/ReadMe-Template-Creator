@@ -22,6 +22,11 @@ inquirer
         },
         {
             type: 'input',
+            message: 'What is your GitHub User HTTPS Link?',
+            name: 'githublink'
+        },
+        {
+            type: 'input',
             message: 'What is your description?',
             name: 'description'
         },
@@ -45,6 +50,11 @@ inquirer
             type: 'input',
             message: 'Please enter your contribution details',
             name: 'contributing',
+        },
+        {
+            type: 'input',
+            message: 'Please describe any tests that were performed',
+            name: 'testing',
         },
         {
             type: 'input',
