@@ -5,11 +5,11 @@ function renderLicenseBadge(license) {
   } else if (license === "MIT") {
     return "![Alt Text](https://img.shields.io/badge/MIT-000000)"
   } else if (license === "Apache2.0") {
-    return "## License \n ![Alt Text](https://img.shields.io/badge/Apache2.0-8A2BE2)"
+    return "![Alt Text](https://img.shields.io/badge/Apache2.0-8A2BE2)"
   } else if (license === "GPL3") {
-    return "## License \n ![Alt Text](https://img.shields.io/badge/GPL3-8A2BE2)"
+    return "![Alt Text](https://img.shields.io/badge/GPL3-8A2BE2)"
   } else if (license === "BSD3") {
-    return "## License \n ![Alt Text](https://img.shields.io/badge/BSD3-8A2BE2)"
+    return "![Alt Text](https://img.shields.io/badge/BSD3-8A2BE2)"
   }
 }
 
