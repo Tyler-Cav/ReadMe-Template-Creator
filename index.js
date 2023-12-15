@@ -35,12 +35,6 @@ inquirer
         err ? console.error(err) : console.log('Success!'))
     })
 
-    .then(response => {
-    fs.writeFile('README.md', generateMarkdown(response), (err) => 
-    err ? console.error(err) : console.log('Success!'))
-})
-
-
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {
 //  
